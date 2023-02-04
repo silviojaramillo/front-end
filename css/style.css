@@ -1,0 +1,18 @@
+a{
+    text-decoration: none;
+}
+h1, h2{
+    text-align: center;
+}
+li{
+    padding: 3px;
+    color: blue;
+    border: 2px solid green;
+    border-radius: 2%;
+    margin: 5px 5px 5px 0px;
+    background-color: beige;
+    list-style-type: none;
+}
+ul{
+    padding: 3px;
+}
