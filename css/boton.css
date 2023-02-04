@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+    color: green;
+    font-weight: bold;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    padding: 15px;
+    color:aqua;
+    background-color: rgb(44, 104, 32);
+    border-radius: 2px 2px 15px 2px;
+    box-shadow:
+    inset 0 -3em 3em rgba(0,0,0,0.1),
+          0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+a:hover{
+    background-color: rgb(76, 172, 57);
+    font-weight: bold;
+}
+
+a:focus{
+    background-color: rgb(107, 247, 80);
+    font-family: cursive; 
+}

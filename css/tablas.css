@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Trocchi&display=swap');
+table{
+    width: 100%;
+}
+table, th, td{
+    padding: 5px;
+    border: 1px solid rgb(0, 217, 255);
+    border-collapse: collapse;
+    text-align: center;
+    font-family: "Trocchi";
+}
+
+caption{
+    color: blueviolet;
+    font-weight: bolder;
+    font-size: 35px;
+    line-height: 75px;
+    font-family: "Trocchi";
+}
+
+th{
+    color: lightblue;
+    background-color: rgb(27, 27, 73);
+}
+/* Cambiando los colores dependiendo de los renglones si son pares o impares */
+tr:nth-child(even){
+    background-color: rgb(155, 71, 71);
+    color: rgb(235, 232, 232);
+}
+
+tr:nth-child(odd){
+    background-color: rgb(233, 73, 73);
+    color: rgb(168, 164, 164);
+}
