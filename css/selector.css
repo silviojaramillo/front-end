@@ -1,0 +1,46 @@
+/* Selector universal */
+/* *{
+    background-color: rgb(21, 129, 224);
+} */
+
+#title_page{
+    color: rgb(141, 38, 238);
+    text-align: center;
+}
+
+#title_table{
+    color: blue;
+    font-size: larger;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+table{
+    text-align: center;
+    width: 100%;
+}
+
+th{
+    font-size: 25px;
+    color: rgb(4, 32, 4);
+    background-color: rgb(12, 114, 117);
+    padding: 5px;
+}
+
+td{
+    color: rgb(13, 161, 112);
+    font-size: 18px;
+    padding: 15px;
+}
+
+tr:nth-child(even){
+    background-color: rgb(168, 41, 147);
+}
+
+tr:nth-child(odd){
+    background-color: rgb(80, 77, 252);
+}
+
+h3{
+    margin: auto;
+}
