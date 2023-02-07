@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+    color: yellowgreen;
+}
+
+.content{
+    border: 2px dotted orangered;
+    width: 35%;
+    height: 150px;
+    text-align: start;
+    padding-left: 15px;
+}
+
+.content.descendiente p{
+    background-color: yellow;
+}
+
+/* Solo selecciona los hijos directos */
+.content.hijo > p{
+    background-color: brown;
+}
+
+.content.adyacente + p{
+    background-color: blue;
+}
+
+.content.hermano ~ p{
+    background-color: crimson;
+}

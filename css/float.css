@@ -1,0 +1,12 @@
+h1{
+    color: green;
+    text-align: center;
+}
+
+.content{
+    border: 1px dotted gold;
+    overflow: auto;
+    width: 20%;
+    height: 100px;
+    float: left;
+}
