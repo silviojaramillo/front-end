@@ -1,0 +1,11 @@
+div{
+    background-color: bisque;
+    margin: 50px;
+    padding-top: 35px;
+    margin-bottom: 15px;
+    
+}
+
+p.miclase{
+    padding-top: inherit;
+}
