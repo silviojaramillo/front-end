@@ -1,0 +1,55 @@
+h1,h2{
+    text-align: center;
+    color: brown;
+}
+
+.content{
+    border: 1px dotted greenyellow;
+    border-radius: 5px;
+    max-width: 50%;
+    margin: auto;
+    padding: 5px;
+    text-align: justify;
+    background-color: rgb(46, 46, 100);
+    color: gainsboro;
+}
+
+div.content:hover{
+    background-color: #457;
+    color: floralwhite;
+}
+
+
+div.content.oculto p{
+    display: none;
+}
+
+div.content.oculto:hover p{
+    display: block;
+}
+
+div.content.primero p:first-child{
+    font-variant: small-caps;
+    color: red;
+}
+
+
+div.content p::selection{
+    color: red;
+    background-color: yellow;
+}
+
+div.content p::first-line{
+    font-variant: small-caps;
+}
+div.content p::first-letter{
+    font-size: 1.5rem;
+}
+
+div.content p::before{
+    content: "- ";
+}
+
+div.content p::after{
+    content: " -";
+}
