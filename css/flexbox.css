@@ -1,0 +1,27 @@
+h1{
+    color:crimson;
+    text-align: center;
+}
+
+.content{
+    border: 2px solid goldenrod;
+    color: black;
+    background-color: gray;
+    width: 50%;
+    margin: auto;
+    padding-left: 15px;
+    border-radius: 10px;
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-flow: row wrap;
+
+}
+
+div.content > p{
+    background-color: burlywood;
+    padding: 10px;
+    color: rgb(2, 68, 126);
+    margin: 15px;
+    font-size: 1.5rem;
+}
