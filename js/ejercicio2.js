@@ -1,10 +1,10 @@
 class Persona{
-    static contadorPersonas = 1;
+    static contadorPersonas = 0;
     constructor(nombre,apellido,edad){
         this._nombre = nombre;
         this._apellido = apellido;
         this._edad = edad;
-        this._id = Persona.contadorPersonas++;
+        this._id = ++Persona.contadorPersonas;
     }
 
     get id(){
@@ -42,10 +42,9 @@ class Persona{
 
 
 class Empleado extends Persona{
-
     static contadorEmpleados = 0;
-    constructor(sueldo){
-        super();
+    constructor(nombre,apellido,edad,sueldo){
+        super(nombre,apellido,edad);
         this._idEmpleado = ++Empleado.contadorEmpleados;
         this._sueldo = sueldo;
     }
@@ -71,8 +70,8 @@ class Empleado extends Persona{
 
 class Cliente extends Persona{
     static contadorClientes = 0;
-    constructor(fecha){
-        super();
+    constructor(nombre,apellido,edad,fecha){
+        super(nombre,apellido,edad);
         this._idCliente = ++Cliente.contadorClientes;
         this._fechaDeRegistro = fecha;
     }
@@ -101,8 +100,8 @@ let persona1 = new Persona('Carlos','Primero','24');
 
 console.log(persona1.toString());
 
-let empleado1 = new Empleado('400');
+let empleado1 = new Empleado('Felipe','Perez','56','5600');
 console.log(empleado1.toString());
 
-let cliente1 = new Cliente('22-10-23');
+let cliente1 = new Cliente('Félix','Fernández',45,new Date);
 console.log(cliente1.toString());
