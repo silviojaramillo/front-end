@@ -16,6 +16,15 @@ class Ingeniero{
     nombreCompleto(){
         return this._profesion + ' ' + this._nombre;
     }
+
+    // Un método estático se asocia con una clase, pero no con sus objetos.
+    static saludar(){
+        console.log('Hola, amigos');
+    }
+
+    static saludar2(inges){
+        console.log(inges.nombre);
+    }
 }
 
 
@@ -27,6 +36,15 @@ console.log(inge1);
 
 let inge2 = new Ingeniero('Lic','Álvaro Perez');
 console.log(inge2);
+
+// Este método no se puede llamar desde un objeto
+/* console.log(inge2.saludar()); */
+
+// Para llamarlo, se necesita la misma clase
+Ingeniero.saludar();
+
+// Pero a un método estático sí se le puede pasar un objeto
+Ingeniero.saludar2(inge1);
 
 
 // Herencia
@@ -55,3 +73,5 @@ let tec1 = new Tecnico('Tec','Javier Velásquez','Empleados');
 console.log(tec1);
 tec1.nombre = "Fernando Velásquez";
 console.log(tec1.nombreCompleto());
+
+Ingeniero.saludar2(tec1);
