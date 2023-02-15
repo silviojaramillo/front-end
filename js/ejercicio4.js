@@ -19,21 +19,73 @@ class InputDevice{
 
 class Mouse extends InputDevice{
     static counterMouse = 0;
-    constructor(inputType,mark,idM){
+    constructor(inputType,mark){
         super(inputType,mark);
-        this._id = idM;
-        this._counterMouse = ++Mouse.counterMouse;
+        this._idM = ++Mouse.counterMouse;
+    }
+    get idMouse(){
+        return this._idM;
     }
     toString(){
-        return 'Mouse';
+        return `Mouse: [idM: ${this._idM}, inputType: ${this._inputType}, mark: ${this._mark}]`;
     }
 }
 
+let mouse1 = new Mouse('RGB','SEIZA');
+console.log(mouse1.toString());
+let mouse2 = new Mouse('RG2','SEIZ2');
+console.log(mouse2.toString());
+
 class Keyboard extends InputDevice{
     static counterKeyboard = 0;
-    constructor(inputType,mark,idK){
+    constructor(inputType,mark){
         super(inputType,mark);
-        this._idK = idK;
-        this._counterKeyboard = ++Keyboard.counterKeyboard;
+        this._idK = ++Keyboard.counterKeyboard;
+    }
+    get idMouse(){
+        return this._idM;
+    }
+    toString(){
+        return `Keyboard: [idK: ${this._idK}, inputType: ${this._inputType}, mark: ${this._mark}]`;
     }
 }
+
+let key1 = new Keyboard('RGB4','seiza');
+console.log(key1.toString());
+
+let key2 = new Keyboard('RGB4','seiza');
+console.log(key2.toString());
+
+
+class Monitor{
+    static counterMonitor = 0;
+    constructor(mark,size){
+        this._idMo = ++Monitor.counterMonitor;
+        this._mark = mark;
+        this._size = size;
+    }
+
+    get idMonitor(){
+        return this._idMo;
+    }
+    get mark(){
+        return this._mark;
+    }
+    set mark(mark){
+        this._mark = mark;
+    }
+    get size(){
+        return this._size;
+    }
+    set size(size){
+        this._size = size
+    }
+    toString(){
+        return `Monitor: [idK: ${this._idMo}, mark: ${this._mark}, size: ${this._size}]`;
+    }
+}
+
+let m1 = new Monitor('HP','Medio');
+console.log(m1.toString());
+let m2 = new Monitor('P','Grande');
+console.log(m2.toString());
