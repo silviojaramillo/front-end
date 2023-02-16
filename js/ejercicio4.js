@@ -89,3 +89,24 @@ let m1 = new Monitor('HP','Medio');
 console.log(m1.toString());
 let m2 = new Monitor('P','Grande');
 console.log(m2.toString());
+
+
+
+class Computer{
+    static counterComputer = 0;
+    constructor(name,monitor,keyboard,mouse){
+        this._idComputer = ++Computer.counterComputer;
+        this._name = name;
+        this._monitor = monitor;
+        this._keyboard = keyboard;
+        this._mouse = mouse;
+    }
+
+    toString(){
+        return `Computer ${this._idComputer}: ${this._name} \n ${this._monitor} \n ${this._mouse} \n ${this._keyboard}`
+    }
+}
+
+
+let computer1 = new Computer('Samsung',m1,key1,mouse1);
+console.log(computer1)
