@@ -31,6 +31,12 @@ let gerente = new Gerente('James',12,'Ingeniería');
 
 function show(dato){
     console.log(dato.obtenerDetalles());
+    if (dato instanceof Gerente) {
+        console.log('dato de tipo gerente');
+    }
+    if(dato instanceof Empleado){
+        console.log('dato de tipo empleado');
+    }
 }
 
 
