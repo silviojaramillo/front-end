@@ -109,4 +109,37 @@ class Computer{
 
 
 let computer1 = new Computer('Samsung',m1,key1,mouse1);
-console.log(computer1)
+console.log(computer1);
+
+let computer2 = new Computer('LG',m2,key2,mouse2);
+console.log(computer2);
+
+
+
+class Order{
+    static counterOrder = 0;
+    constructor(){
+        this._idOrder = ++Order.counterOrder;
+        this._computers = [];
+    }
+
+    addComputer(computer){
+        this._computers.push(computer);
+    }
+
+    showOrder(){
+        let computersOrder = '';
+        for (let comput of this._computers) {
+            computersOrder += ` \n ${comput}`;
+            
+        }
+        console.log(`Orden:  ${this._idOrder} computadoras: ${computersOrder}` );
+    }
+}
+
+
+let orden1 = new Order();
+orden1.addComputer(computer1);
+orden1.addComputer(computer2);
+
+orden1.showOrder();
