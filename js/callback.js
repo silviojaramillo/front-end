@@ -19,3 +19,18 @@ factor(55,48,mostrar);
 function esperar(){
     console.log('Saludar después de unos segúndos');
 }
+
+// El tiempo se expresa en milisegundos
+setTimeout(esperar,5000);
+
+
+
+// SetInterval
+
+let time = () => {
+    let fecha = new Date();
+    console.log(`Hora: ${fecha.getHours()} minuto: ${fecha.getMinutes()} segundos: ${fecha.getSeconds()}`);
+}
+
+
+setInterval(time,1000);
