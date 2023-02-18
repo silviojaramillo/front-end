@@ -19,5 +19,4 @@ let promise = new Promise(resolved =>{
     console.log('Fin de la promesa');
 });
 
-
-promise.then(valor=>console.log(valor));
+/* promise.then(valor=>console.log(valor)); */
