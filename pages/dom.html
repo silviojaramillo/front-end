@@ -7,9 +7,38 @@
     <title>Manipulando el DOM</title>
     <link rel="stylesheet" href="/css/dom.css">
     <link href="/js/dom.js">
+
+    <style>
+        .color{
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <h1 id="texto">Hola mundo</h1>
-    <p>Este es mi primer mensaje</p>
+    <p id="par" class="color">Este es mi primer mensaje</p>
+    <p id="par" class="color">Este es mi segundo mensaje</p>
+    <h1>H1 número 2</h1>
+    <script>
+
+        // Recuperando mediante ID
+        let cabecero = document.getElementById('texto').innerHTML;
+        console.log('El valor del cabecero h1 es: ', cabecero);
+        let parrafo = document.getElementById('par').innerHTML;
+        console.log('El valor del párrafo p es: ', parrafo);
+        texto.innerHTML = 'Saludos, amigos.';
+
+
+        // Recuperando mediante tags
+        let tagse = document.getElementsByTagName('h1');
+        console.log('El valor de tags: ', tagse[0].innerHTML);
+        console.log('El valor de tags: ', tagse[1].innerHTML);
+
+        let classElementsby = document.getElementsByClassName('color');
+        for (let index = 0; index < classElementsby.length; index++) {
+            console.log(classElementsby[index].innerHTML);
+            
+        }
+    </script>
 </body>
 </html>
