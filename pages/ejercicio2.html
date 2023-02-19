@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de DOM con JS</title>
+</head>
+<body>
+    <h1 style="color:brown" id="titulo" onclick="cambiarI(this)">Manejo de DOM con JS</h1>
+    <img id="imagen" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/0858/production/_127263120_weic2216b.jpg" alt="Imagen1" width="300px" height="450px">
+    <button id="cambiar" onclick="cambiarI()">Cambiar</button>
+    <script>
+        function cambiarI(titulo){
+            document.getElementById('imagen').src = 'https://cdn.pixabay.com/photo/2015/03/30/20/33/heart-700141_1280.jpg';
+            document.getElementById('titulo').style.color = 'red';
+            titulo.innerHTML = 'Cambio de contenido';
+        }
+    </script>
+</body>
+</html>

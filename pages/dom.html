@@ -18,6 +18,7 @@
     <h1 id="texto">Hola mundo</h1>
     <p id="par" class="color">Este es mi primer mensaje</p>
     <p id="par" class="color">Este es mi segundo mensaje</p>
+    <p id="par" class="">Este es mi segundo mensaje</p>
     <h1>H1 número 2</h1>
     <script>
 
@@ -37,7 +38,11 @@
         let classElementsby = document.getElementsByClassName('color');
         for (let index = 0; index < classElementsby.length; index++) {
             console.log(classElementsby[index].innerHTML);
-            
+        }
+
+        let all = document.querySelectorAll('p.color');
+        for(valor of all){
+            console.log(valor.innerHTML);
         }
     </script>
 </body>
