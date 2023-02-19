@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de DOM con JS</title>
+</head>
+<body>
+    <h1 style="color:brown" id="titulo" onclick="cambiarI(this)">Manejo de DOM con JS</h1>
+    <button id="cambiar" onclick="cambiarI()">Cambiar</button>
+    <div id="mostrar_nuevo_contenido"></div>
+    <script>
+        document.getElementById('titulo').onclick = cambiarTexto;
+        function cambiarTexto(){
+            document.getElementById('mostrar_nuevo_contenido').innerHTML = 'Nuevo Contenido';
+        }
+    </script>
+</body>
+</html>

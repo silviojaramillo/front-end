@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando el DOM con JS</title>
+</head>
+<body onload="entrar()">
+    <div id="mostrar"></div>
+    <script>
+        function entrar() {
+            alert('Entrando a la página web');
+            let texto = '';
+            if(navigator.cookieEnabled){
+                texto = 'Las cookies están habilitadas';
+            }else{
+                texto = 'Las cookies no están habilitadas';
+            }
+            document.getElementById('mostrar').innerHTML = texto;
+        }
+    </script>
+</body>
+</html>
