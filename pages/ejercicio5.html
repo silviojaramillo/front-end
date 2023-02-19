@@ -7,13 +7,26 @@
     <title>Onchage</title>
 </head>
 <body>
-    <h1>Manejo de eventos con JS</h1>
+    <h1 onmouseover="color(this)" onmouseout="ccolor(this)" onmouseup="up(this)" onmousedown="dowm(this)">Manejo de eventos con JS</h1>
     <form>
         Nombre: <input type="text" name="" value=""  onchange="convertir(this)">
     </form>
     <script>
         function convertir(elementInput){
             elementInput.value = elementInput.value.toUpperCase();
+        }
+
+        function color(valorH1) {
+            valorH1.style.color = 'red';
+        }
+        function ccolor(valorH1) {
+            valorH1.style.color = 'blue';
+        }
+        function up(valorH1) {
+            valorH1.style.color = 'green';
+        }
+        function down(valorH1) {
+            valorH1.style.color = 'brown';
         }
     </script>
 </body>
