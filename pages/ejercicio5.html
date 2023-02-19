@@ -9,7 +9,7 @@
 <body>
     <h1 onmouseover="color(this)" onmouseout="ccolor(this)" onmouseup="up(this)" onmousedown="dowm(this)">Manejo de eventos con JS</h1>
     <form>
-        Nombre: <input type="text" name="" value=""  onchange="convertir(this)">
+        Nombre: <input type="text" name="" value=""  onchange="convertir(this)" onfocus="active(this)" onblur="salir(this)">
     </form>
     <script>
         function convertir(elementInput){
@@ -27,6 +27,12 @@
         }
         function down(valorH1) {
             valorH1.style.color = 'brown';
+        }
+        function active(activo) {
+            activo.style.background = 'brown';
+        }
+        function salir(active) {
+            active.style.background = 'green';
         }
     </script>
 </body>

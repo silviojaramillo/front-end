@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add event Listener</title>
+</head>
+<body>
+    <h1>Eventos desde JS</h1>
+    <form id="forma">
+        Nombre: <input type="text" id="nombre">
+        Apellido: <input type="text" id="apellido">
+    </form>
+    <script>
+        // Para todos los elementos del form
+        let formulario  = document.getElementById('forma');
+        formulario.addEventListener('focus',(evento) => {
+            evento.target.style.background = 'pink';
+        },true);
+        // El boleano al finalizar la función flecha se le conoce como delegación de evento o useCapture
+        formulario.addEventListener('blur',(evento) => {
+            evento.target.style.background = 'beige';
+        },true);
+        /* document.getElementById('nombre').addEventListener('focus',cambiar);
+        document.getElementById('nombre').addEventListener('blur',salir);
+        document.getElementById('apellido').addEventListener('focus',(evento) => {
+            evento.target.style.background = 'pink';
+        });
+        document.getElementById('apellido').addEventListener('blur',(evento) => {
+            evento.target.style.background = 'beige';
+        });
+        function cambiar(evento) {
+            let componente = evento.target;
+            componente.style.background = 'yellow';
+        }
+        function salir(evento) {
+            let componente = evento.target;
+            componente.style.background = 'green';
+        } */
+    </script>
+</body>
+</html>
